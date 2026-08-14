@@ -1,3 +1,99 @@
+
+Claude finished the response
+Here it is, tightened and point-form — read it out loud once before submitting, that's the fastest way to catch anything that still sounds off.
+
+The best project I have worked on is AI Classroom Monitoring System, built at BYTEHACK 2026 (a college hackathon at BCE Patna).
+
+The problem — teachers have no real way to know if a class is actually paying attention until it's too late. Most existing tools are either not made for smaller colleges or too invasive (constant cloud recording etc). So i set two rules for myself: everything runs on-device, and it has to work live, not as a report you read after class.
+
+What it does:
+
+YOLO detects and counts people in the frame
+MediaPipe pulls facial landmarks, and i used OpenCV's solvePnP to calculate head-pose angle — basically checking if someone's looking at the board or away
+MediaPipe's pose tracking also catches hand raises and slumped posture (so it can flag if someone's asleep)
+Whisper transcribes the teacher's mic every 30 seconds, so we could track things like Q&A time vs lecture time
+all of this runs through a FastAPI backend i built, pushed live to a React dashboard — anyone on the same wifi (like a teacher walking around) can open it and watch it update in real time
+also added a video-upload mode for recorded sessions, and a session analysis tab to review past sessions
+What i'm actually proudest of:
+i added a privacy mode from day one — faces get blurred before anything's shown, and the database only stores numbers, never actual video. nobody asked for this, it wasn't a judging requirement. felt like something watching a classroom needed by default, not as an afterthought.
+
+Hardest technical part:
+getting yolo, mediapipe, and whisper to all run together without the dashboard lagging. whisper's heavier than the vision models, so i ran it on its own 30-second cycle instead of frame-by-frame like the rest. figuring that out on an actual hackathon clock, no do-overs, taught me more than most of my coursework has.
+
+We won 1st place with it.
+
+
+Message collapsed
+This is close to submission-ready, but there's one real contradiction I need to flag before you send it — not a style thing, a logic problem.
+
+The Kaggriculture line at the end undercuts your whole answer. You spent the entire response establishing ClassroomAI Monitor as the best project, then the last line says "also right now iam working on my best one kaggriculture" — which directly contradicts what you just argued. A reviewer will notice that. Two ways to fix it:
+
+Cut the Kaggriculture line entirely from Q8 and let ClassroomAI stand alone as your answer — it's a direct question asking for one project, and picking one confidently is stronger than hedging
+Or reframe it as forward-looking, not competing for "best" — something like "right now i'm also building an agent for Kaggriculture, a live $50K Kaggle competition — repo linked below" as a closing line that shows momentum, without calling it your best
+I'd genuinely go with the first option. A confident single answer reads better than a hedge.
+
+Smaller thing worth reconsidering: you softened "faces get blurred, nobody asked for this, felt like it needed it by default" down to "making it light to use" — that changes your motivation from privacy-conscious to performance-conscious, which was actually your strongest, most distinctive line in the whole answer. Your call, but that detail was doing real work.
+
+Here's the version with just the contradiction removed (kept everything else exactly as you wrote it):
+
+This is hard I have worked on many projects but
+The best project I have worked on is AI Classroom Monitoring System in BYTEHACK 2026 (a College hackathon in bce patna). and our team won 1st position.
+repo link-https://github.com/Pr1nce-Raj/ClassroomAI-Monitor
+
+The problem — teachers have no real way to know if a class is actually paying attention until it's too late. Most existing tools are either not made for smaller colleges or too invasive (constant cloud recording etc). So i set two rules for myself: everything runs on-device, and it has to work live, not as a report you read after class.
+
+What it does:
+
+YOLO detects and counts people in the frame
+MediaPipe pulls facial landmarks, and i used OpenCV's solvePnP to calculate head-pose angle — basically checking if someone's looking at the board or away
+MediaPipe's pose tracking also catches hand raises and slumped posture (so it can flag if someone's asleep)
+Whisper transcribes the teacher's mic every 30 seconds, so we could track things like Q&A time vs lecture time
+all of this runs through a FastAPI backend i built, pushed live to a React dashboard — anyone on the same wifi (like a teacher walking around) can open it and watch it update in real time
+also added a video-upload mode for recorded sessions, and a session analysis tab to review past sessions
+the database only stores numbers, never actual video, making it light to use.
+Hardest technical part:
+getting yolo, mediapipe, and whisper to all run together without the dashboard lagging. whisper's heavier than the vision models, so i ran it on its own 30-second cycle instead of frame-by-frame like the rest.
+
+That's a complete, confident, self-contained answer. Both Q7 and Q8 are done — good luck with the submission.
+
+now these 
+add extra  ihave to submit now
+
+I don't see anything attached to this message — no document, no text pasted in. It looks like "these" was meant to reference something that didn't come through.
+
+Since you're on a deadline: what do you need added — is it more form questions (beyond Q7/Q8), or something else to add to the Q7/Q8 answers we just finished? Paste it in and I'll turn it around fast.
+
+
+You are out of free messages until 10:10 PM
+
+<!DOCTYPE html> <html lang="en" class="scroll-smooth bg-black"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Md Adnan | Aspiring AI Engineer</title> <meta name="description" content="Portfolio of Md Adnan, aspiring
+
+pasted
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pasted content
+42.14 KB •718 lines
+•
+Formatting may be inconsistent from source
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth bg-black">
 <head>
@@ -5,15 +101,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md Adnan | Aspiring AI Engineer</title>
     <meta name="description" content="Portfolio of Md Adnan, aspiring AI Engineer, builder, and competitor.">
-
-    <!-- Google Fonts: DM Serif Display (massive headers) and Space Mono (brutalist accents) -->
+    
+    <!-- Google Fonts: DM Serif Display (for the massive headers) and Space Mono (for the brutalist accents) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -27,7 +123,7 @@
                     },
                     colors: {
                         black: '#0a0a0a',
-                        brandRed: '#ff3300',
+                        brandRed: '#ff3300', /* The iconic bright red from the reference */
                         zinc: {
                             400: '#a1a1aa',
                             500: '#71717a',
@@ -40,8 +136,135 @@
         }
     </script>
 
-    <!-- Site styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden; /* Unlocked the vertical scrollbar! */
+        }
+
+        /* Subtle Background Grid */
+        @keyframes panGrid {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+        .bg-grid {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+            animation: panGrid 4s linear infinite; /* Keeps the background alive */
+        }
+
+        /* Canvas Cloudy Cursor (Z-index 0) */
+        #cloud-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Massive Typography Settings */
+        .massive-text {
+            font-size: clamp(4rem, 12vw, 15rem);
+            line-height: 0.85;
+            letter-spacing: -0.02em;
+        }
+
+        /* Brutalist Box Shadow */
+        @keyframes pulseShadow {
+            0% { box-shadow: 4px 4px 0px #ff3300; transform: translate(0px, 0px); }
+            50% { box-shadow: 8px 8px 0px #ff3300; transform: translate(-2px, -2px); }
+            100% { box-shadow: 4px 4px 0px #ff3300; transform: translate(0px, 0px); }
+        }
+        .brutalist-shadow {
+            box-shadow: 4px 4px 0px #ff3300;
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: pulseShadow 2s infinite ease-in-out; /* Breathing effect */
+        }
+        .brutalist-shadow:hover {
+            animation: none;
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #ff3300;
+        }
+        
+        .brutalist-card-shadow {
+            box-shadow: -4px 4px 0px rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Intro Section */
+        #hero-intro {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main Content Intro Animation */
+        #main-portfolio {
+            position: relative;
+            z-index: 20;
+            min-height: 100vh;
+        }
+
+        /* Bottom Scrolling Ticker */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: rgba(10, 10, 10, 0.9);
+            border-top: 2px solid #ff3300;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .ticker {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 18s linear infinite;
+        }
+        .ticker__item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 1.25rem;
+            font-family: 'DM Serif Display', serif;
+            color: #ff3300;
+            text-transform: uppercase;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Reveal Animation on scroll inside main portfolio */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom Nav Indicator for main body */
+        .nav-link.active .nav-indicator {
+            width: 3rem;
+            background-color: #ff3300;
+        }
+        .nav-link.active .nav-text {
+            color: #ffffff;
+        }
+
+        /* Selection styling */
+        ::selection {
+            background-color: #ff3300;
+            color: white;
+        }
+    </style>
 </head>
 <body class="antialiased font-sans">
 
@@ -50,13 +273,13 @@
 
     <!-- HERO INTRO SCREEN -->
     <section id="hero-intro" class="bg-black bg-grid flex flex-col justify-between min-h-screen w-full">
-
+        
         <!-- Top Nav (Brutalist blocks) -->
         <div class="p-6 md:p-8 flex justify-between items-start z-10 w-full relative">
             <div class="text-brandRed text-2xl font-serif">
                 <i class="fa-solid fa-circle-dot"></i>
             </div>
-
+            
             <div class="flex flex-col gap-1 text-xs font-mono font-bold uppercase text-white tracking-widest text-right">
                 <div class="flex gap-1 justify-end">
                     <span class="bg-brandRed px-3 py-1">Code</span>
@@ -80,7 +303,7 @@
                     SYSTEMS
                 </h1>
             </div>
-
+            
             <!-- Right Side Context -->
             <div class="w-full lg:w-1/4 mt-8 lg:mt-0 flex flex-col items-start lg:items-end text-left lg:text-right gap-6">
                 <h2 class="font-serif text-3xl md:text-4xl text-white leading-tight">
@@ -89,7 +312,7 @@
                 <p class="font-mono text-sm text-zinc-400 max-w-sm uppercase leading-relaxed">
                     MD Adnan is an aspiring AI Engineer & Builder. Bridging the gap between complex machine learning models and full-stack execution. 300 days into the AI/ML grind.
                 </p>
-
+                
                 <!-- The Trigger Button -->
                 <button id="enter-btn" class="bg-brandRed text-white font-mono font-bold px-8 py-4 uppercase text-lg brutalist-shadow mt-4 z-50 cursor-pointer">
                     See The Work <i class="fa-solid fa-arrow-down ml-2"></i>
@@ -139,7 +362,7 @@
     <div id="main-portfolio" class="bg-transparent bg-grid">
         <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
             <div class="lg:flex lg:justify-between lg:gap-4">
-
+                
                 <!-- Left Side Fixed Header (Sticky) -->
                 <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 z-20 pointer-events-none">
                     <div class="pointer-events-auto">
@@ -201,7 +424,6 @@
                             </a>
                         </li>
                         <li class="shrink-0 ml-4">
-                            <!-- TODO: replace with your hosted resume PDF link -->
                             <a href="#" class="inline-flex items-center gap-2 border-2 border-brandRed bg-transparent px-4 py-1.5 text-sm font-mono font-bold uppercase text-brandRed hover:bg-brandRed hover:text-white transition-colors" target="_blank">
                                 <span>Resume</span><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                             </a>
@@ -211,7 +433,7 @@
 
                 <!-- Right Side Scrolling Content -->
                 <main id="content" class="pt-24 lg:w-1/2 lg:py-24 z-20">
-
+                    
                     <!-- About Section -->
                     <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 reveal">
                         <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/90 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
@@ -278,17 +500,15 @@
                         <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/90 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
                             <h2 class="text-sm font-mono font-bold uppercase tracking-widest text-brandRed lg:sr-only">Projects</h2>
                         </div>
-
+                        
                         <div class="space-y-12">
-
+                            
                             <!-- Project: ClassroomAI Monitor -->
                             <div class="group relative grid pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4 transition-all">
                                 <div class="z-10 sm:col-span-2 mb-2 sm:mb-0 mt-1 flex flex-col items-start font-mono text-xs">
                                     <span class="uppercase tracking-wide text-zinc-500 font-bold mb-2 border border-zinc-700 px-2 py-1">Full-Stack</span>
                                     <div class="flex gap-3 text-zinc-400">
-                                        <!-- TODO: add demo video link -->
                                         <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
-                                        <!-- TODO: add GitHub repo link -->
                                         <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
                                     </div>
                                 </div>
@@ -305,9 +525,7 @@
                                 <div class="z-10 sm:col-span-2 mb-2 sm:mb-0 mt-1 flex flex-col items-start font-mono text-xs">
                                     <span class="uppercase tracking-wide text-zinc-500 font-bold mb-2 border border-zinc-700 px-2 py-1">Web App</span>
                                     <div class="flex gap-3 text-zinc-400">
-                                        <!-- TODO: add live demo link -->
                                         <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-solid fa-link text-lg"></i></a>
-                                        <!-- TODO: add GitHub repo link -->
                                         <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
                                     </div>
                                 </div>
@@ -349,16 +567,14 @@
 
                             <!-- Active Projects Grid (Smaller) -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-zinc-800 pt-8">
-
+                                
                                 <div class="border border-zinc-800 p-4 bg-zinc-900/30 hover:border-brandRed transition-colors flex flex-col justify-between">
                                     <div>
                                         <div class="flex items-center gap-2 mb-3">
                                             <span class="w-2 h-2 bg-brandRed rounded-full animate-pulse"></span>
                                             <span class="font-mono text-xs text-brandRed font-bold uppercase">Actively Building</span>
                                         </div>
-                                        <h3 class="font-serif text-xl text-white mb-2">
-                                            <a href="https://github.com/Adnan9-63/ats-resume-system" target="_blank" class="hover:underline decoration-brandRed underline-offset-4">AI ATS Resume System <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
-                                        </h3>
+                                        <h3 class="font-serif text-xl text-white mb-2">AI ATS Resume System</h3>
                                         <p class="text-sm text-zinc-400">Sophisticated NLP parser & matching engine simulating modern ATS systems for candidates.</p>
                                     </div>
                                 </div>
@@ -370,10 +586,9 @@
                                             <span class="font-mono text-xs text-brandRed font-bold uppercase">Competing Now</span>
                                         </div>
                                         <h3 class="font-serif text-xl text-white mb-2">
-                                            <!-- TODO: confirm/replace with the exact competition URL -->
-                                            <a href="https://www.kaggle.com/" target="_blank" class="hover:underline decoration-brandRed underline-offset-4">AI Agent Security: Multi-Step Tool Attacks <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
+                                            <a href="https://www.kaggle.com/" target="_blank" class="hover:underline decoration-brandRed underline-offset-4">Kaggriculture Agent <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
                                         </h3>
-                                        <p class="text-sm text-zinc-400">Red-teaming autonomous agents — probing multi-step tool-use exploits in a Kaggle competition.</p>
+                                        <p class="text-sm text-zinc-400">Participating in active $50K pool. Autonomous agents for agricultural yield & risk forecasting.</p>
                                     </div>
                                 </div>
 
@@ -388,7 +603,7 @@
                         </div>
 
                         <div class="space-y-8">
-
+                            
                             <!-- Highlight: Adobe Hackathon -->
                             <div class="border-2 border-brandRed p-5 bg-brandRed/5 brutalist-card-shadow relative">
                                 <div class="absolute -top-3 -right-3 bg-brandRed text-white text-xs font-mono font-bold px-2 py-1 transform rotate-3">TOP 8.8%</div>
@@ -420,7 +635,6 @@
                                 <p class="text-sm text-zinc-400 leading-relaxed mb-3">
                                     Secured competitive rank by exploiting web vulnerabilities and reverse-engineering binaries.
                                 </p>
-                                <!-- TODO: link to your writeups (PDF, blog post, or GitHub) -->
                                 <a href="#" class="inline-flex items-center text-xs font-mono font-bold text-brandRed hover:text-white transition-colors uppercase">
                                     <i class="fa-solid fa-file-pdf mr-2"></i> Read Writeups
                                 </a>
@@ -444,7 +658,6 @@
                             Coded from scratch in <span class="text-zinc-300">VS Code</span>. Design inspired by brutalist typography & editorial web aesthetics.
                         </p>
                         <div class="flex gap-4 font-bold text-brandRed">
-                            <!-- TODO: replace with your real contact email -->
                             <a href="mailto:contact@example.com" class="hover:text-white transition-colors uppercase tracking-widest border-b border-transparent hover:border-white">
                                 <i class="fa-solid fa-envelope mr-1"></i> Initiate Contact
                             </a>
@@ -455,7 +668,147 @@
         </div>
     </div>
 
-    <!-- Site behaviour -->
-    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Interactive Cloud/Mist Particle System (White/Gray Mist)
+            const canvas = document.getElementById('cloud-canvas');
+            const ctx = canvas.getContext('2d');
+            let width, height;
+
+            function resizeCanvas() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            const particles = [];
+            let mouse = { x: -1000, y: -1000 };
+            let isMouseMoving = false;
+            let mouseTimeout;
+
+            // Track mouse movement
+            window.addEventListener('mousemove', (e) => {
+                mouse.x = e.clientX;
+                mouse.y = e.clientY;
+                isMouseMoving = true;
+
+                // Spawn new mist particles
+                for (let i = 0; i < 3; i++) {
+                    particles.push({
+                        x: mouse.x + (Math.random() - 0.5) * 40, 
+                        y: mouse.y + (Math.random() - 0.5) * 40,
+                        vx: (Math.random() - 0.5) * 0.8,         
+                        vy: (Math.random() - 0.5) * 0.8 - 0.5,   
+                        radius: Math.random() * 40 + 20,         
+                        life: 1,                                 
+                        decay: Math.random() * 0.015 + 0.005     
+                    });
+                }
+
+                clearTimeout(mouseTimeout);
+                mouseTimeout = setTimeout(() => {
+                    isMouseMoving = false;
+                }, 100);
+            });
+
+            // Animation Loop for clouds
+            function animateParticles() {
+                ctx.clearRect(0, 0, width, height);
+
+                // This guarantees the mist moves on its own, even if the mouse is still.
+                if (Math.random() < 0.25) { 
+                    particles.push({
+                        x: Math.random() * width, 
+                        y: Math.random() * height,
+                        vx: (Math.random() - 0.5) * 0.5,         
+                        vy: (Math.random() - 0.5) * 0.5 - 0.2,   
+                        radius: Math.random() * 60 + 30,         
+                        life: 0.6,                                 
+                        decay: Math.random() * 0.006 + 0.002     
+                    });
+                }
+
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    let p = particles[i];
+                    
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    p.radius += 0.4; 
+                    p.life -= p.decay;
+
+                    if (p.life <= 0) {
+                        particles.splice(i, 1);
+                        continue;
+                    }
+
+                    // Soft white/gray mist over black background
+                    const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
+                    // Extremely subtle opacity
+                    gradient.addColorStop(0, `rgba(255, 255, 255, ${p.life * 0.06})`);
+                    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = gradient;
+                    ctx.fill();
+                }
+                requestAnimationFrame(animateParticles);
+            }
+            animateParticles();
+
+
+            // 2. Transition from Hero to Main Content
+            const enterBtn = document.getElementById('enter-btn');
+            const mainPortfolio = document.getElementById('main-portfolio');
+            
+            enterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Smooth scroll directly to the main portfolio section
+                mainPortfolio.scrollIntoView({ behavior: 'smooth' });
+            });
+
+
+            // 3. Scroll Spy for Navigation Links inside Main Portfolio
+            const sections = document.querySelectorAll('#main-portfolio section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px', 
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        const id = entry.target.getAttribute('id');
+                        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                        if (activeLink) activeLink.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+
+            // 4. Reveal Animation on Scroll
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '0px 0px -50px 0px',
+                threshold: 0.1
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
 </body>
 </html>
