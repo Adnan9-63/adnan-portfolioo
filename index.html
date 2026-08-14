@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Adnan | Aspiring AI Engineer</title>
+    <meta name="description" content="Portfolio of Md Adnan, aspiring AI Engineer, builder, and competitor.">
+
+    <!-- Google Fonts: DM Serif Display (massive headers) and Space Mono (brutalist accents) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['DM Serif Display', 'serif'],
+                        mono: ['Space Mono', 'monospace'],
+                    },
+                    colors: {
+                        black: '#0a0a0a',
+                        brandRed: '#ff3300',
+                        zinc: {
+                            400: '#a1a1aa',
+                            500: '#71717a',
+                            800: '#27272a',
+                            900: '#18181b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Site styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased font-sans">
+
+    <!-- Interactive Cloud Canvas Background (Mist) -->
+    <canvas id="cloud-canvas"></canvas>
+
+    <!-- HERO INTRO SCREEN -->
+    <section id="hero-intro" class="bg-black bg-grid flex flex-col justify-between min-h-screen w-full">
+
+        <!-- Top Nav (Brutalist blocks) -->
+        <div class="p-6 md:p-8 flex justify-between items-start z-10 w-full relative">
+            <div class="text-brandRed text-2xl font-serif">
+                <i class="fa-solid fa-circle-dot"></i>
+            </div>
+
+            <div class="flex flex-col gap-1 text-xs font-mono font-bold uppercase text-white tracking-widest text-right">
+                <div class="flex gap-1 justify-end">
+                    <span class="bg-brandRed px-3 py-1">Code</span>
+                    <span class="bg-brandRed px-3 py-1">AI/ML</span>
+                </div>
+                <div class="flex gap-1 justify-end">
+                    <span class="bg-brandRed px-3 py-1">Execute</span>
+                    <span class="bg-brandRed px-3 py-1">Compete</span>
+                </div>
+                <span class="bg-brandRed px-3 py-1 w-full text-center block mt-1">Md Adnan</span>
+            </div>
+        </div>
+
+        <!-- Main Hero Content -->
+        <div class="flex-grow flex flex-col lg:flex-row items-center px-6 md:px-8 w-full z-10">
+            <!-- Left Side Huge Text -->
+            <div class="w-full lg:w-3/4 flex flex-col">
+                <h1 class="massive-text font-serif text-brandRed font-black uppercase">
+                    BUILDING<br>
+                    INTELLIGENT<br>
+                    SYSTEMS
+                </h1>
+            </div>
+
+            <!-- Right Side Context -->
+            <div class="w-full lg:w-1/4 mt-8 lg:mt-0 flex flex-col items-start lg:items-end text-left lg:text-right gap-6">
+                <h2 class="font-serif text-3xl md:text-4xl text-white leading-tight">
+                    But probably not <br>what you're expecting.
+                </h2>
+                <p class="font-mono text-sm text-zinc-400 max-w-sm uppercase leading-relaxed">
+                    MD Adnan is an aspiring AI Engineer & Builder. Bridging the gap between complex machine learning models and full-stack execution. 300 days into the AI/ML grind.
+                </p>
+
+                <!-- The Trigger Button -->
+                <button id="enter-btn" class="bg-brandRed text-white font-mono font-bold px-8 py-4 uppercase text-lg brutalist-shadow mt-4 z-50 cursor-pointer">
+                    See The Work <i class="fa-solid fa-arrow-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Scrolling Marquee Ticker -->
+        <div class="ticker-wrap mt-auto z-10 w-full backdrop-blur">
+            <div class="ticker py-3">
+                <span class="ticker__item">300 Days of AI/ML</span>
+                <span class="ticker__item text-white font-mono text-sm">✦</span>
+                <span class="ticker__item">Full-Stack Execution</span>
+                <span class="ticker__item text-white font-mono text-sm">✦</span>
+                <span class="ticker__item">Adobe Hackathon Top 8.8%</span>
+                <span class="ticker__item text-white font-mono text-sm">✦</span>
+                <span class="ticker__item">Team Akatsuki</span>
+                <span class="ticker__item text-white font-mono text-sm">✦</span>
+                <span class="ticker__item">System Architecture</span>
+                <span class="ticker__item text-white font-mono text-sm">✦</span>
+                <span class="ticker__item">Competitor</span>
+                <span class="ticker__item text-white font-mono text-sm">✦</span>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Bar -->
+        <div class="z-10 w-full">
+            <div class="w-full bg-brandRed text-white flex justify-between items-center px-6 py-2 font-mono text-xs font-bold uppercase">
+                <div class="hidden md:flex gap-6">
+                    <a href="https://github.com/Adnan9-63" target="_blank" class="hover:text-black transition-colors">GitHub</a>
+                    <a href="https://www.linkedin.com/in/md-adnan96" target="_blank" class="hover:text-black transition-colors">LinkedIn</a>
+                    <a href="https://www.kaggle.com/mdadnan96" target="_blank" class="hover:text-black transition-colors">Kaggle</a>
+                    <a href="https://leetcode.com/adnan966" target="_blank" class="hover:text-black transition-colors">LeetCode</a>
+                </div>
+                <div class="flex md:hidden gap-4">
+                    <a href="https://github.com/Adnan9-63" target="_blank"><i class="fa-brands fa-github text-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/md-adnan96" target="_blank"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                </div>
+                <div>
+                    &copy; 2026 All Rights Reserved
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN PORTFOLIO CONTENT (Revealed after button click) -->
+    <div id="main-portfolio" class="bg-transparent bg-grid">
+        <div class="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+            <div class="lg:flex lg:justify-between lg:gap-4">
+
+                <!-- Left Side Fixed Header (Sticky) -->
+                <header class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 z-20 pointer-events-none">
+                    <div class="pointer-events-auto">
+                        <h1 class="text-5xl font-serif font-bold tracking-tight text-brandRed sm:text-7xl uppercase">
+                            <a href="/">Md Adnan</a>
+                        </h1>
+                        <h2 class="mt-3 text-xl font-mono font-bold tracking-tight text-white uppercase">
+                            Aspiring AI Engineer
+                        </h2>
+                        <p class="mt-4 max-w-sm leading-relaxed text-zinc-400 font-mono text-sm">
+                            Builder, Competitor, 300 Days In. Bridging the gap between intelligent algorithms and full-stack execution.
+                        </p>
+
+                        <!-- Navigation -->
+                        <nav class="nav hidden lg:block mt-16" aria-label="In-page jump links">
+                            <ul class="w-max font-mono">
+                                <li>
+                                    <a class="nav-link group flex items-center py-3 active" href="#about">
+                                        <span class="nav-indicator mr-4 h-px w-8 bg-zinc-700 transition-all duration-300 group-hover:w-16 group-hover:bg-brandRed group-focus-visible:w-16 group-focus-visible:bg-brandRed"></span>
+                                        <span class="nav-text text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">About</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link group flex items-center py-3" href="#skills">
+                                        <span class="nav-indicator mr-4 h-px w-8 bg-zinc-700 transition-all duration-300 group-hover:w-16 group-hover:bg-brandRed group-focus-visible:w-16 group-focus-visible:bg-brandRed"></span>
+                                        <span class="nav-text text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Skills</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link group flex items-center py-3" href="#projects">
+                                        <span class="nav-indicator mr-4 h-px w-8 bg-zinc-700 transition-all duration-300 group-hover:w-16 group-hover:bg-brandRed group-focus-visible:w-16 group-focus-visible:bg-brandRed"></span>
+                                        <span class="nav-text text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Projects</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="nav-link group flex items-center py-3" href="#achievements">
+                                        <span class="nav-indicator mr-4 h-px w-8 bg-zinc-700 transition-all duration-300 group-hover:w-16 group-hover:bg-brandRed group-focus-visible:w-16 group-focus-visible:bg-brandRed"></span>
+                                        <span class="nav-text text-xs font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white transition-colors">Achievements</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social Icons (Left Sticky Bottom) -->
+                    <ul class="mt-8 flex items-center gap-5 lg:mt-0 pointer-events-auto" aria-label="Social media">
+                        <li class="shrink-0">
+                            <a href="https://github.com/Adnan9-63" class="block text-zinc-400 hover:text-brandRed transition-colors" target="_blank"><i class="fa-brands fa-github text-2xl"></i></a>
+                        </li>
+                        <li class="shrink-0">
+                            <a href="https://www.linkedin.com/in/md-adnan96" class="block text-zinc-400 hover:text-brandRed transition-colors" target="_blank"><i class="fa-brands fa-linkedin text-2xl"></i></a>
+                        </li>
+                        <li class="shrink-0">
+                            <a href="https://www.kaggle.com/mdadnan96" class="block text-zinc-400 hover:text-brandRed transition-colors" target="_blank"><i class="fa-brands fa-kaggle text-2xl"></i></a>
+                        </li>
+                        <li class="shrink-0">
+                            <a href="https://leetcode.com/adnan966" class="block text-zinc-400 hover:text-brandRed transition-colors" target="_blank">
+                                <i class="fa-solid fa-code text-xl"></i>
+                            </a>
+                        </li>
+                        <li class="shrink-0 ml-4">
+                            <!-- TODO: replace with your hosted resume PDF link -->
+                            <a href="#" class="inline-flex items-center gap-2 border-2 border-brandRed bg-transparent px-4 py-1.5 text-sm font-mono font-bold uppercase text-brandRed hover:bg-brandRed hover:text-white transition-colors" target="_blank">
+                                <span>Resume</span><i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </header>
+
+                <!-- Right Side Scrolling Content -->
+                <main id="content" class="pt-24 lg:w-1/2 lg:py-24 z-20">
+
+                    <!-- About Section -->
+                    <section id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 reveal">
+                        <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/90 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+                            <h2 class="text-sm font-mono font-bold uppercase tracking-widest text-brandRed lg:sr-only">About</h2>
+                        </div>
+                        <div class="font-sans text-zinc-300 leading-relaxed space-y-4 text-base">
+                            <p>
+                                I am a developer who believes in execution over theory. I build scalable systems, compete in high-stakes hackathons, and document the entire grind. What started as an interest in intelligent systems has evolved into a relentless <span class="font-bold text-white bg-brandRed/20 px-1">300 Days of AI/ML</span> challenge, pushing me to write production-grade code every single day.
+                            </p>
+                            <p>
+                                My focus bridges the gap between complex machine learning models and intuitive, full-stack web architectures. Whether I'm designing an AI-driven classroom monitor, reverse-engineering a vulnerability in a CTF, or scraping a massive dataset for a Kaggle competition, my goal is always to engineer robust, real-world solutions.
+                            </p>
+                            <p>
+                                When I'm not pushing code to GitHub or hunting for flags, I'm analyzing new architectures, competing alongside my team <em class="text-white font-serif italic text-lg">Akatsuki</em>, or finding ways to make tech run faster and smarter.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Skills Section -->
+                    <section id="skills" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 reveal">
+                        <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/90 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+                            <h2 class="text-sm font-mono font-bold uppercase tracking-widest text-brandRed lg:sr-only">Skills</h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 font-mono">
+                            <div class="border border-zinc-800 p-4 brutalist-card-shadow bg-black/50">
+                                <h3 class="text-brandRed mb-3 uppercase tracking-wider font-bold">Languages</h3>
+                                <ul class="flex flex-wrap gap-2 text-sm">
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">Python</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">JavaScript</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">Java</li>
+                                </ul>
+                            </div>
+                            <div class="border border-zinc-800 p-4 brutalist-card-shadow bg-black/50">
+                                <h3 class="text-brandRed mb-3 uppercase tracking-wider font-bold">AI & ML</h3>
+                                <ul class="flex flex-wrap gap-2 text-sm">
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">TensorFlow</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">PyTorch</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">Scikit-learn</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">CV & NLP</li>
+                                </ul>
+                            </div>
+                            <div class="border border-zinc-800 p-4 brutalist-card-shadow bg-black/50">
+                                <h3 class="text-brandRed mb-3 uppercase tracking-wider font-bold">Backend/Web</h3>
+                                <ul class="flex flex-wrap gap-2 text-sm">
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">Node.js</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">Express</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">MongoDB</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">React</li>
+                                </ul>
+                            </div>
+                            <div class="border border-zinc-800 p-4 brutalist-card-shadow bg-black/50">
+                                <h3 class="text-brandRed mb-3 uppercase tracking-wider font-bold">Security & Tools</h3>
+                                <ul class="flex flex-wrap gap-2 text-sm">
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">CTF Concepts</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">Git/Linux</li>
+                                    <li class="bg-zinc-900 px-2 py-1 text-zinc-300 border border-zinc-700">Postman</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Projects Section -->
+                    <section id="projects" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 reveal">
+                        <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/90 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+                            <h2 class="text-sm font-mono font-bold uppercase tracking-widest text-brandRed lg:sr-only">Projects</h2>
+                        </div>
+
+                        <div class="space-y-12">
+
+                            <!-- Project: ClassroomAI Monitor -->
+                            <div class="group relative grid pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4 transition-all">
+                                <div class="z-10 sm:col-span-2 mb-2 sm:mb-0 mt-1 flex flex-col items-start font-mono text-xs">
+                                    <span class="uppercase tracking-wide text-zinc-500 font-bold mb-2 border border-zinc-700 px-2 py-1">Full-Stack</span>
+                                    <div class="flex gap-3 text-zinc-400">
+                                        <!-- TODO: add demo video link -->
+                                        <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+                                        <!-- TODO: add GitHub repo link -->
+                                        <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                                    </div>
+                                </div>
+                                <div class="z-10 sm:col-span-6 group-hover:pl-2 transition-all">
+                                    <h3 class="font-serif text-2xl leading-tight text-white mb-2">ClassroomAI Monitor</h3>
+                                    <p class="mt-2 text-sm leading-normal text-zinc-400">
+                                        A highly complete full-stack AI system designed to monitor and analyze classroom dynamics. Engineered real-time data processing pipelines connecting intelligent inference models to a sleek administrative dashboard.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Project: CampusGigs -->
+                            <div class="group relative grid pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4 transition-all border-t border-zinc-800 pt-8">
+                                <div class="z-10 sm:col-span-2 mb-2 sm:mb-0 mt-1 flex flex-col items-start font-mono text-xs">
+                                    <span class="uppercase tracking-wide text-zinc-500 font-bold mb-2 border border-zinc-700 px-2 py-1">Web App</span>
+                                    <div class="flex gap-3 text-zinc-400">
+                                        <!-- TODO: add live demo link -->
+                                        <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-solid fa-link text-lg"></i></a>
+                                        <!-- TODO: add GitHub repo link -->
+                                        <a href="#" class="hover:text-brandRed transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                                    </div>
+                                </div>
+                                <div class="z-10 sm:col-span-6 group-hover:pl-2 transition-all">
+                                    <h3 class="font-serif text-2xl leading-tight text-white mb-2">CampusGigs</h3>
+                                    <p class="mt-2 text-sm leading-normal text-zinc-400">
+                                        A localized freelance and gig marketplace tailored for campus environments. Built with a scalable backend architecture to handle user auth, gig matching, and secure real-time messaging.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Project: 300 Days of AI/ML -->
+                            <div class="group relative grid pb-1 sm:grid-cols-8 sm:gap-8 md:gap-4 transition-all border-t border-zinc-800 pt-8">
+                                <div class="z-10 sm:col-span-2 mb-2 sm:mb-0 mt-1 flex flex-col items-start font-mono">
+                                    <span class="uppercase tracking-wide text-zinc-500 font-bold mb-2 text-xs border border-zinc-700 px-2 py-1">Journey</span>
+                                    <!-- Progress Bar -->
+                                    <div class="w-full mt-2 pr-4 sm:pr-0">
+                                        <div class="flex justify-between text-[10px] text-zinc-400 mb-1">
+                                            <span>Day 161</span>
+                                            <span>300</span>
+                                        </div>
+                                        <div class="w-full bg-zinc-900 border border-zinc-700 h-2">
+                                            <div class="bg-brandRed h-full" style="width: 53.6%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="z-10 sm:col-span-6 group-hover:pl-2 transition-all">
+                                    <h3 class="font-serif text-2xl leading-tight text-white mb-2">300 Days of AI/ML</h3>
+                                    <p class="mt-2 text-sm leading-normal text-zinc-400">
+                                        A relentless daily commitment to mastering Artificial Intelligence and Machine Learning. Building end-to-end projects, understanding deep architectures, and logging progress publicly.
+                                    </p>
+                                    <div class="mt-4 flex flex-wrap gap-2 font-mono">
+                                        <span class="bg-black border border-brandRed text-white px-2 py-1 text-xs">SmartCart</span>
+                                        <span class="bg-black border border-brandRed text-white px-2 py-1 text-xs">Date Fruit Vision</span>
+                                        <span class="bg-black border border-brandRed text-white px-2 py-1 text-xs">Power Plant Model</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Active Projects Grid (Smaller) -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-zinc-800 pt-8">
+
+                                <div class="border border-zinc-800 p-4 bg-zinc-900/30 hover:border-brandRed transition-colors flex flex-col justify-between">
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <span class="w-2 h-2 bg-brandRed rounded-full animate-pulse"></span>
+                                            <span class="font-mono text-xs text-brandRed font-bold uppercase">Actively Building</span>
+                                        </div>
+                                        <h3 class="font-serif text-xl text-white mb-2">
+                                            <a href="https://github.com/Adnan9-63/ats-resume-system" target="_blank" class="hover:underline decoration-brandRed underline-offset-4">AI ATS Resume System <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
+                                        </h3>
+                                        <p class="text-sm text-zinc-400">Sophisticated NLP parser & matching engine simulating modern ATS systems for candidates.</p>
+                                    </div>
+                                </div>
+
+                                <div class="border border-zinc-800 p-4 bg-zinc-900/30 hover:border-brandRed transition-colors flex flex-col justify-between">
+                                    <div>
+                                        <div class="flex items-center gap-2 mb-3">
+                                            <i class="fa-solid fa-fire text-brandRed text-xs"></i>
+                                            <span class="font-mono text-xs text-brandRed font-bold uppercase">Competing Now</span>
+                                        </div>
+                                        <h3 class="font-serif text-xl text-white mb-2">
+                                            <!-- TODO: confirm/replace with the exact competition URL -->
+                                            <a href="https://www.kaggle.com/" target="_blank" class="hover:underline decoration-brandRed underline-offset-4">AI Agent Security: Multi-Step Tool Attacks <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1"></i></a>
+                                        </h3>
+                                        <p class="text-sm text-zinc-400">Red-teaming autonomous agents — probing multi-step tool-use exploits in a Kaggle competition.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Achievements Section -->
+                    <section id="achievements" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 reveal">
+                        <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-black/90 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0">
+                            <h2 class="text-sm font-mono font-bold uppercase tracking-widest text-brandRed lg:sr-only">Achievements</h2>
+                        </div>
+
+                        <div class="space-y-8">
+
+                            <!-- Highlight: Adobe Hackathon -->
+                            <div class="border-2 border-brandRed p-5 bg-brandRed/5 brutalist-card-shadow relative">
+                                <div class="absolute -top-3 -right-3 bg-brandRed text-white text-xs font-mono font-bold px-2 py-1 transform rotate-3">TOP 8.8%</div>
+                                <div class="flex items-baseline justify-between mb-2">
+                                    <h3 class="text-xl font-serif text-white">Adobe University Hackathon</h3>
+                                    <span class="font-mono text-xs text-brandRed font-bold">2026</span>
+                                </div>
+                                <p class="text-sm text-zinc-300 font-mono mb-2 uppercase tracking-wide">Team Akatsuki</p>
+                                <p class="text-sm text-zinc-400 leading-relaxed">
+                                    Cleared Round 1 of the rigorous university hackathon hosted on Unstop. Selected alongside <span class="text-white font-bold border-b border-brandRed">26,760</span> teams out of a massive <span class="text-white font-bold border-b border-brandRed">3,01,082</span> globally registered participants.
+                                </p>
+                            </div>
+
+                            <div class="border border-zinc-800 p-5 hover:border-white transition-colors">
+                                <div class="flex items-baseline justify-between mb-2">
+                                    <h3 class="text-lg font-serif text-zinc-200">BYTEHACK</h3>
+                                    <span class="font-mono text-xs text-zinc-500">2026</span>
+                                </div>
+                                <p class="text-sm text-zinc-400 leading-relaxed">
+                                    Competed and executed rapid prototyping under pressure. Delivered functional system architecture within the rigid 24-hour time constraint.
+                                </p>
+                            </div>
+
+                            <div class="border border-zinc-800 p-5 hover:border-white transition-colors">
+                                <div class="flex items-baseline justify-between mb-2">
+                                    <h3 class="text-lg font-serif text-zinc-200">RookieCTF</h3>
+                                    <span class="font-mono text-xs text-zinc-500">2026</span>
+                                </div>
+                                <p class="text-sm text-zinc-400 leading-relaxed mb-3">
+                                    Secured competitive rank by exploiting web vulnerabilities and reverse-engineering binaries.
+                                </p>
+                                <!-- TODO: link to your writeups (PDF, blog post, or GitHub) -->
+                                <a href="#" class="inline-flex items-center text-xs font-mono font-bold text-brandRed hover:text-white transition-colors uppercase">
+                                    <i class="fa-solid fa-file-pdf mr-2"></i> Read Writeups
+                                </a>
+                            </div>
+
+                            <div class="border border-zinc-800 p-5 hover:border-white transition-colors">
+                                <div class="flex items-baseline justify-between mb-2">
+                                    <h3 class="text-lg font-serif text-zinc-200">National Youth Festival</h3>
+                                    <span class="font-mono text-xs text-zinc-500">2026</span>
+                                </div>
+                                <p class="text-sm text-zinc-400 leading-relaxed">
+                                    Represented in technical problem-solving categories, contributing to collaborative engineering solutions at a national scale.
+                                </p>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <footer class="max-w-md pb-16 text-sm text-zinc-500 sm:pb-0 reveal font-mono text-xs">
+                        <p class="mb-4">
+                            Coded from scratch in <span class="text-zinc-300">VS Code</span>. Design inspired by brutalist typography & editorial web aesthetics.
+                        </p>
+                        <div class="flex gap-4 font-bold text-brandRed">
+                            <!-- TODO: replace with your real contact email -->
+                            <a href="mailto:contact@example.com" class="hover:text-white transition-colors uppercase tracking-widest border-b border-transparent hover:border-white">
+                                <i class="fa-solid fa-envelope mr-1"></i> Initiate Contact
+                            </a>
+                        </div>
+                    </footer>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site behaviour -->
+    <script src="js/script.js"></script>
+</body>
+</html>
